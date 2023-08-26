@@ -1,0 +1,131 @@
+/*main*/
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: #0b1d26;
+    color: #fff;
+    font-family: "PT Sans";
+}
+.wrapper {
+    min-height: 100%;
+}
+._container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/*parallax*/
+.parallax {
+    min-height: 100vh;
+}
+.parallax__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__container {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.parallax__label {
+    color: #fbd784;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 6px;
+
+    align-items: center;
+    margin-bottom: 30px;
+}
+.parallax__label::before{
+    content: '';
+    margin-right: 30px;
+    background-color: #fbd784;
+    height: 1px;
+    width: 70px;
+}
+.parallax__title {
+    font-size: 88px;
+}
+.parallax__imges {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+
+/*images-parallax*/
+.images-parallax {
+}
+.images-parallax__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.images-parallax_clouds,
+.images-parallax_mountins,
+.images-parallax_humen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+.images-parallax_clouds {
+    background: url('../img/clouds.jpg') top / cover no-repeat;
+    top: 0;
+}
+.images-parallax_mountins {
+    background: url('../img/mountains.png') top / cover no-repeat;
+    top: 15%;
+    z-index: 2;
+}
+.images-parallax_humen {
+    background: url('../img/human.png') top / cover no-repeat;
+    top: 45%;
+    z-index: 3;
+}
+@media (max-aspect-ratio: 3/2) {
+    .images-parallax_humen {
+        background-position: 20% top;
+    }
+}
+
+/*content*/
+.content {
+    position: relative;
+    z-index: 4;
+
+    background-color: #0b1d26;
+}
+.content:before{
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transform: translate(0,-100%);
+    background: linear-gradient( rgba(11,29,38,0), rgba(11,29,38,1));
+}
+.content__title {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.content__text {
+    line-height: 150%;
+    font-size: 16px;
+}
+.content__text p{
+    margin-bottom: 30px;
+}
