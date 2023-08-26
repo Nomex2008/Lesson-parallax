@@ -106,6 +106,8 @@ body {
     z-index: 4;
 
     background-color: #0b1d26;
+
+    border-top: 1px solid #0b1d26;
 }
 .content:before{
     pointer-events: none;
